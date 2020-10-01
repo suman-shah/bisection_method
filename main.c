@@ -5,7 +5,7 @@ int bisection (float *ortalama, float a, float b, int *tkrr)
 {
     *ortalama=(a+b)/2;
     ++(*tkrr);
-    printf("Tekrarlanma numarasi: %d X = %f\n", *tkrr, *ortalama);
+    printf("\nTekrarlanma numarasi: %d X = %f\n", *tkrr, *ortalama);
 }
 
 //return dongusu icerisindeki pow komutu da fonksiyonde degerin katsayisini yazmakta cok yardimci oldu.
@@ -24,15 +24,15 @@ int main ()
 //bazi printf ve scanf satirlarini daha acik gormem amaciyla ayrintili yazdim.
 int tkrr = 0, maxtkrr, n, m, l, k;
 float  x, a, b, hp, x1;
-printf("Lutfen n*x^m+l*x+k fonksiyonu icin n,m,l ve k degerlerini giriniz\n");
+printf("\nLutfen n*x^m+l*x+k fonksiyonu icin n,m,l ve k degerlerini giriniz\n");
 scanf("%d %d %d %d", &n, &m, &l, &k);
-printf("Lutfen a degerini giriniz:");
+printf("\nLutfen a degerini giriniz:");
 scanf("%f", &a);
-printf("Lutfen b degerini giriniz:");
+printf("\nLutfen b degerini giriniz:");
 scanf("%f", &b);
-printf("Lutfen hata payini giriniz:");
+printf("\nLutfen hata payini giriniz:");
 scanf("%f", &hp);
-printf("Lutfen maximum tekrarlanmayi giriniz:");
+printf("\nLutfen maximum tekrarlanmayi giriniz:");
 scanf("%d", &maxtkrr);
 
 
@@ -55,6 +55,6 @@ bisection (&x1, a, b, &tkrr);
             x=x1;
     }
 while (tkrr < maxtkrr);
-printf("Cozum bulunamiyor ve ya tekrarlanmalar yeterli degil!");
+printf("\nCozum bulunamiyor ve ya tekrarlanmalar yeterli degil!");
 return 0;
 }
